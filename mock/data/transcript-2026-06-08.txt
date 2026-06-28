@@ -1,0 +1,39 @@
+Sprint Standup — June 8, 2026
+Attendees: Siddharth, Prathmesh, Imaya, Pavan, Madhu, Lenin, Mohammed, Pratyush
+
+Siddharth: Alright let's get started. Prathmesh, how's the Belk rewards update going?
+
+Prathmesh: RDSB-14927 is in code review. I pushed the updated ranges yesterday. Waiting for someone to pick up the review. I also made progress on RDSB-14818 — the Verizon SRS fields integration. I'm about 80% done, should have a PR up by tomorrow.
+
+Siddharth: Got it. I'll try to review the Belk PR today. Imaya, what about the Reeds validation?
+
+Imaya: I'm working on RDSB-15114, the full page text validation for Reeds. Hit a small issue with the client-specific text mapping — the config from SRS doesn't match what UX provided. I need to sync with UX on that. RDSB-15115 I haven't started yet, waiting for 15114 to be done first since they share components.
+
+Siddharth: Can you flag that to UX today? We don't want that to become a blocker.
+
+Imaya: Yeah I'll message them right after this call.
+
+Pavan: For RDSB-15113, the "How to earn rewards" text validation for SYF MC — I found two more clients that have the same issue. I'm fixing all three together. Should be done today. And RDSB-15108, the helper text in Credit Redemption Drawer for Verizon — that one's also in progress, maybe tomorrow.
+
+Siddharth: Good catch grouping those together. Pratyush, brand refresh?
+
+Pratyush: RDSB-14874, the certificate rewards template — I've been going back and forth with UX on the enterprise design. They sent a new Figma yesterday, I'm implementing it now. The color tokens changed so I need to update the theme config. Probably need another day.
+
+Siddharth: Alright. Madhu, QA updates?
+
+Madhu: I finished validating RDSB-15125, the snapshot drawer removal for statements. It's passing in Vista-UAT. RDSB-15118, the June release validation — I'm halfway through the test cases. Found one minor issue with the rewards summary not refreshing, but it might be a caching thing. I'll retest after clearing cache.
+
+Lenin: For my items — RDSB-15124, snapshot drawer removal for distribution, validation is done, all good. RDSB-15123, the certificate one, I found a regression in the print view. The certificate layout breaks when the drawer is removed. I've logged it and tagged Prathmesh.
+
+Prathmesh: Yeah I saw that. I think it's a CSS issue with the print media query. I'll look at it after the Belk review.
+
+Mohammed: RDSB-15122, the portal clients full view snapshot drawer removal — I'm validating now. About 60% through the test matrix. No issues so far.
+
+Siddharth: Great. For my items — RDSB-14913, the digital wallet cert, I'm still blocked on getting the cert from the security team. I've escalated to the manager. And RDSB-14932, the Reeds val prop update — I'll pick that up once the cert issue is resolved.
+
+Decision: We agreed to prioritize the snapshot drawer removal tickets since they're all targeted for 6/17. QA validation is the critical path right now.
+
+Action item: Imaya to sync with UX on Reeds text mapping today.
+Action item: Siddharth to review Prathmesh's Belk PR (RDSB-14927).
+Action item: Prathmesh to investigate print view regression flagged by Lenin on RDSB-15123.
+Action item: Siddharth to follow up with security team on RDSB-14913 cert.

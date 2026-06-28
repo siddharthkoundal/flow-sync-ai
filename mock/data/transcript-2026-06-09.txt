@@ -1,0 +1,39 @@
+Sprint Standup — June 9, 2026
+Attendees: Siddharth, Prathmesh, Imaya, Pavan, Madhu, Lenin, Mohammed, Pratyush
+
+Siddharth: Quick sync everyone. Let's start with blockers. I'm still waiting on the security team for RDSB-14913, the digital wallet cert. They said they'll have it by end of day but I've heard that before. If it's not done by tomorrow I'm going to escalate to VP level.
+
+Prathmesh: Blocker from my side too — I looked at the print view regression Lenin found on RDSB-15123. It's not just CSS, the component tree changes when the snapshot drawer is removed and the print layout depends on a wrapper div that no longer exists. I need to refactor the print template. This might push the 6/17 date for this ticket.
+
+Siddharth: That's concerning. How long to fix?
+
+Prathmesh: Two days if I focus on it. The Belk PR RDSB-14927 — Siddharth you reviewed it yesterday, I addressed your comments, it's ready for re-review. And RDSB-14818, the Verizon SRS fields — PR is up as of this morning.
+
+Siddharth: I'll re-review Belk today. Good on Verizon.
+
+Imaya: Update on RDSB-15114 — I talked to UX yesterday, turns out the config was correct but I was looking at an old version of the Figma. My mistake. I'm back on track, should have it done by EOD. RDSB-15115 I'll start tomorrow, the shared components are already in place from 15114.
+
+Pavan: RDSB-15113 is done — PR merged this morning. All three clients fixed. RDSB-15108, the Verizon helper text, also done. PR is up for review. RDSB-14979, the OWCS discovery — I started looking into it. It's a bigger effort than expected, the OWCS API doesn't have a sandbox environment. I need to figure out how to test locally.
+
+Siddharth: Let's timebox the OWCS discovery to this sprint for investigation only. No implementation commitment.
+
+Pratyush: RDSB-14874, brand refresh certificate template — good news, I finished the implementation with the new Figma designs. PR is up. The color tokens are all updated. Need UX sign-off before we merge though, I'll ping them.
+
+Madhu: RDSB-15125 validation is complete, all test cases passed in Vista-UAT. Moving it to done. RDSB-15118, the June release validation — I'm at 80% now. The caching issue I mentioned yesterday was indeed a browser cache thing, not a bug. Should finish validation today.
+
+Lenin: RDSB-15124 is fully validated, good to go. RDSB-15123 — I'll hold off on further testing until Prathmesh fixes the print regression. No point testing on a broken print view.
+
+Mohammed: RDSB-15122 validation is at 90%. Found one edge case — when a portal client has multiple accounts, the drawer removal doesn't apply to the secondary accounts. Tagging dev team on that.
+
+Siddharth: That sounds like a potential bug. Mohammed, can you create a defect for that?
+
+Mohammed: Will do right after this call.
+
+Decision: OWCS discovery (RDSB-14979) is investigation-only this sprint. No implementation.
+Decision: RDSB-15123 print regression takes priority over new work for Prathmesh. If it risks 6/17, we'll flag to the PM.
+
+Action item: Mohammed to create defect for multi-account snapshot drawer issue.
+Action item: Prathmesh to focus on RDSB-15123 print regression fix — ETA 2 days.
+Action item: Pratyush to get UX sign-off on RDSB-14874 brand refresh PR.
+Action item: Siddharth to re-review RDSB-14927 Belk PR today.
+Action item: Siddharth to escalate RDSB-14913 cert to VP if not resolved by tomorrow.

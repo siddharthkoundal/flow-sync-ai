@@ -1,0 +1,6 @@
+# Local runtime configuration and generated context
+watcher/config/watcher.json
+watcher/config/last-transcript-summary.txt
+
+# Local tooling
+.DS_Store

@@ -1,0 +1,10 @@
+{
+  "jiraProject": "RDSB",
+  "jiraJql": "",
+  "jiraMaxResults": 50,
+  "bbProject": "",
+  "bbRepo": "",
+  "confluencePageId": "1701642865",
+  "pollIntervalMs": 60000,
+  "teamsWebhookUrl": ""
+}
